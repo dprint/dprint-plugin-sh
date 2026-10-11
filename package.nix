@@ -32,7 +32,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoLock = {
     lockFile = ./Cargo.lock;
     outputHashes = {
-      "shuck-ast-0.2.4" = "sha256-Z43g1peH6KP7L7yHmCZh9+wPG70xAsO0qQhTkyHGAXs=";
+      "shuck-ast-0.2.4" = "sha256-VyA2BBEDIK/PBxUF6ldpMxdMBGwDjWdLu6jQXeAs2KY=";
     };
   };
 

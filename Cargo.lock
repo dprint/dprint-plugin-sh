@@ -694,7 +694,7 @@ dependencies = [
 [[package]]
 name = "shuck-ast"
 version = "0.2.4"
-source = "git+https://github.com/kachick/shuck?branch=range-formatter#c1f72c997c7bf68717277b20f0ab1966cb548b99"
+source = "git+https://github.com/kachick/shuck?branch=range-formatter#afca668ff9beacb4f0a5ef7aacaf6ef0c67ae84b"
 dependencies = [
  "compact_str",
 ]
@@ -702,7 +702,7 @@ dependencies = [
 [[package]]
 name = "shuck-formatter"
 version = "0.2.4"
-source = "git+https://github.com/kachick/shuck?branch=range-formatter#c1f72c997c7bf68717277b20f0ab1966cb548b99"
+source = "git+https://github.com/kachick/shuck?branch=range-formatter#afca668ff9beacb4f0a5ef7aacaf6ef0c67ae84b"
 dependencies = [
  "memchr",
  "rustc-hash",
@@ -714,7 +714,7 @@ dependencies = [
 [[package]]
 name = "shuck-indexer"
 version = "0.2.4"
-source = "git+https://github.com/kachick/shuck?branch=range-formatter#c1f72c997c7bf68717277b20f0ab1966cb548b99"
+source = "git+https://github.com/kachick/shuck?branch=range-formatter#afca668ff9beacb4f0a5ef7aacaf6ef0c67ae84b"
 dependencies = [
  "shuck-ast",
  "shuck-parser",
@@ -723,7 +723,7 @@ dependencies = [
 [[package]]
 name = "shuck-parser"
 version = "0.2.4"
-source = "git+https://github.com/kachick/shuck?branch=range-formatter#c1f72c997c7bf68717277b20f0ab1966cb548b99"
+source = "git+https://github.com/kachick/shuck?branch=range-formatter#afca668ff9beacb4f0a5ef7aacaf6ef0c67ae84b"
 dependencies = [
  "memchr",
  "shuck-ast",
