@@ -63,7 +63,7 @@ impl SyncPluginHandler<Configuration> for ShellPluginHandler {
     PluginInfo {
       name: env!("CARGO_PKG_NAME").to_string(),
       version: version.clone(),
-      config_key: "sh".to_string(),
+      config_key: "shuck".to_string(),
       help_url: "https://github.com/dprint/dprint-plugin-shuck".to_string(),
       config_schema_url: format!(
         "https://plugins.dprint.dev/dprint/dprint-plugin-shuck/{}/schema.json",
