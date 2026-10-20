@@ -102,7 +102,7 @@ function buildFixPrompt(options: AiFixOptions): string {
     : [];
 
   return [
-    `You are updating the "dprint-plugin-sh" Rust crate, a dprint plugin that wraps the \`shuck-formatter\` crate to format shell scripts (\`.sh\`, \`.bash\`, \`.zsh\` and others).`,
+    `You are updating the "dprint-plugin-shuck" Rust crate, a dprint plugin that wraps the \`shuck-formatter\` crate to format shell scripts (\`.sh\`, \`.bash\`, \`.zsh\` and others).`,
     ``,
     situation,
     ...failureOutput,
@@ -134,7 +134,7 @@ function buildFixPrompt(options: AiFixOptions): string {
 
 function buildRefixPrompt(review: ReviewResult): string {
   return [
-    `An independent reviewer examined your changes to dprint-plugin-sh and found issues that must be fixed. Address every blocking issue below, keeping \`cargo test\` green. Do not commit or push.`,
+    `An independent reviewer examined your changes to dprint-plugin-shuck and found issues that must be fixed. Address every blocking issue below, keeping \`cargo test\` green. Do not commit or push.`,
     ``,
     `Reviewer summary: ${review.summary}`,
     ``,
@@ -211,7 +211,7 @@ async function reviewChanges(options: AiFixOptions): Promise<ReviewResult> {
 
 function buildReviewPrompt(options: AiFixOptions): string {
   return [
-    `You are an independent reviewer for dprint-plugin-sh, a dprint plugin that wraps the shuck-formatter crate to format shell scripts (\`.sh\`, \`.bash\`, \`.zsh\` and others). shuck-formatter was just upgraded from ${options.fromVersion} to ${options.toVersion} and another AI edited this plugin to reconcile it. Review the UNCOMMITTED working-tree changes.`,
+    `You are an independent reviewer for dprint-plugin-shuck, a dprint plugin that wraps the shuck-formatter crate to format shell scripts (\`.sh\`, \`.bash\`, \`.zsh\` and others). shuck-formatter was just upgraded from ${options.fromVersion} to ${options.toVersion} and another AI edited this plugin to reconcile it. Review the UNCOMMITTED working-tree changes.`,
     `IMPORTANT: this is REVIEW ONLY. Read any files and run read-only commands (git diff, cat, grep, find, etc.) to investigate, but you MUST NOT edit, create, or delete any files, and MUST NOT run git commit or git push. Leave the working tree exactly as you found it.`,
     ``,
     `Investigate as needed:`,

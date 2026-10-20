@@ -174,7 +174,7 @@ async function updateRustToolchain(upstreamVersion: string) {
 
 function getCrateData(url: string) {
   return $.request(url)
-    .header("User-Agent", "dprint-plugin-sh update script")
+    .header("User-Agent", "dprint-plugin-shuck update script")
     .json<{
       crate?: { max_stable_version?: string };
       version?: { rust_version?: string | null };

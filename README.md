@@ -1,6 +1,6 @@
-# dprint-plugin-sh
+# dprint-plugin-shuck
 
-[![npm version](https://img.shields.io/npm/v/@dprint/sh.svg)](https://www.npmjs.com/package/@dprint/sh) [![CI](https://github.com/dprint/dprint-plugin-sh/workflows/CI/badge.svg)](https://github.com/dprint/dprint-plugin-sh/actions?query=workflow%3ACI)
+[![npm version](https://img.shields.io/npm/v/@dprint/shuck.svg)](https://www.npmjs.com/package/@dprint/shuck) [![CI](https://github.com/dprint/dprint-plugin-shuck/workflows/CI/badge.svg)](https://github.com/dprint/dprint-plugin-shuck/actions?query=workflow%3ACI)
 
 Adapter for [shuck-formatter](https://crates.io/crates/shuck-formatter) for use as a formatting plugin in [dprint](https://github.com/dprint/dprint). It formats shell scripts.
 
@@ -13,7 +13,7 @@ Originally created by [Kenichi Kamiya](https://github.com/kachick).
 Then in your project's directory with a dprint.json file, run:
 
 ```shellsession
-dprint add sh
+dprint add shuck
 ```
 
 Note: You do not need shfmt or shuck installed globally as dprint will run shuck-formatter from the .wasm file in a sandboxed environment.
@@ -156,13 +156,13 @@ This list satisfies linguist [mapping](https://github.com/github-linguist/lingui
 ## JS Formatting API
 
 - [JS Formatter](https://github.com/dprint/js-formatter) - Browser/Deno and Node
-- [npm package](https://www.npmjs.com/package/@dprint/sh)
+- [npm package](https://www.npmjs.com/package/@dprint/shuck)
 
 ## Versioning
 
 This repo automatically upgrades to the latest version of shuck-formatter once a day. You can check which version of shuck-formatter is being used by looking at the `shuck-formatter` entry in the Cargo.toml file in this repo:
 
-https://github.com/dprint/dprint-plugin-sh/blob/main/Cargo.toml
+https://github.com/dprint/dprint-plugin-shuck/blob/main/Cargo.toml
 
 At the moment, the version of this plugin does not reflect the version of shuck-formatter.
 

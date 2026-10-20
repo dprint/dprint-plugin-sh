@@ -1,15 +1,15 @@
 extern crate dprint_development;
-extern crate dprint_plugin_sh;
+extern crate dprint_plugin_shuck;
 
 use std::path::PathBuf;
 use std::sync::Arc;
 
 use dprint_core::configuration::*;
 use dprint_development::*;
-use dprint_plugin_sh::configuration::Configuration;
-use dprint_plugin_sh::configuration::Dialect;
-use dprint_plugin_sh::configuration::resolve_config;
-use dprint_plugin_sh::*;
+use dprint_plugin_shuck::configuration::Configuration;
+use dprint_plugin_shuck::configuration::Dialect;
+use dprint_plugin_shuck::configuration::resolve_config;
+use dprint_plugin_shuck::*;
 
 #[test]
 fn test_specs() {

@@ -64,12 +64,12 @@ impl SyncPluginHandler<Configuration> for ShellPluginHandler {
       name: env!("CARGO_PKG_NAME").to_string(),
       version: version.clone(),
       config_key: "sh".to_string(),
-      help_url: "https://github.com/dprint/dprint-plugin-sh".to_string(),
+      help_url: "https://github.com/dprint/dprint-plugin-shuck".to_string(),
       config_schema_url: format!(
-        "https://plugins.dprint.dev/dprint/dprint-plugin-sh/{}/schema.json",
+        "https://plugins.dprint.dev/dprint/dprint-plugin-shuck/{}/schema.json",
         version
       ),
-      update_url: Some("https://plugins.dprint.dev/dprint/dprint-plugin-sh/latest.json".to_string()),
+      update_url: Some("https://plugins.dprint.dev/dprint/dprint-plugin-shuck/latest.json".to_string()),
     }
   }
 

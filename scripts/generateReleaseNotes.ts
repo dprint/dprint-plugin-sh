@@ -15,13 +15,13 @@ ${changelog}
 Then in your project's directory with a dprint.json file, run:
 
 \`\`\`shellsession
-dprint add sh
+dprint add shuck
 \`\`\`
 
 ## JS Formatting API
 
 * [JS Formatter](https://github.com/dprint/js-formatter) - Browser/Deno and Node
-* [npm package](https://www.npmjs.com/package/@dprint/sh)
+* [npm package](https://www.npmjs.com/package/@dprint/shuck)
 `;
 
 console.log(text);
