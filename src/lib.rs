@@ -476,7 +476,7 @@ mod tests {
     }
 
     #[test]
-    fn test_format_range_syntax_error() {
+    fn test_format_range_incomplete_statement_returns_none() {
         let mut handler = ShellPluginHandler;
         let resolve_result =
             handler.resolve_config(ConfigKeyMap::new(), &GlobalConfiguration::default());
@@ -489,8 +489,29 @@ mod tests {
             range: Some(0..5),
             token: &cancellation_token,
         };
-        let result = handler.format(request, |_| unreachable!());
-        assert!(result.is_err());
+        let result = handler.format(request, |_| unreachable!()).unwrap();
+        assert_eq!(result, None);
+    }
+
+    #[test]
+    fn test_format_range_formats_statement_with_unrelated_syntax_error() {
+        let mut handler = ShellPluginHandler;
+        let resolve_result =
+            handler.resolve_config(ConfigKeyMap::new(), &GlobalConfiguration::default());
+        let cancellation_token = NullCancellationToken;
+        let original = "echo   one\nif true; then\n";
+        let request = SyncFormatRequest {
+            file_path: &PathBuf::from("test.sh"),
+            file_bytes: original.as_bytes().to_vec(),
+            config_id: FormatConfigId::from_raw(1),
+            config: &resolve_result.config,
+            range: Some(0..9),
+            token: &cancellation_token,
+        };
+        let formatted = handler.format(request, |_| unreachable!()).unwrap();
+        assert!(formatted.is_some());
+        let formatted_str = String::from_utf8(formatted.unwrap()).unwrap();
+        assert_eq!(formatted_str, "echo one\nif true; then\n");
     }
 
     #[test]
