@@ -1,0 +1,10 @@
+~~ useTabs: false, indentWidth: 4 ~~
+== formats with spaces ==
+if true; then
+echo foo
+fi
+
+[expect]
+if true; then
+    echo foo
+fi

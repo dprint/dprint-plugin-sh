@@ -1,0 +1,18 @@
+-- file.zsh --
+== formats zsh ==
+#!/usr/bin/env zsh
+
+typeset -a list=(apple banana cherry)
+
+repeat 3 {
+print -l ${(U)list}
+}
+
+[expect]
+#!/usr/bin/env zsh
+
+typeset -a list=(apple banana cherry)
+
+repeat 3 {
+	print -l ${(U)list}
+}

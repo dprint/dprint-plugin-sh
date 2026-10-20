@@ -1,0 +1,41 @@
+~~ dialect: bash, binaryNextLine: true, functionNextLine: true, indentWidth: 4, keepPadding: true, minify: false, neverSplit: false, simplify: false, spaceRedirects: true, switchCaseIndent: true, useTabs: false ~~
+== formats with all options ==
+#!/usr/bin/env bash
+
+foo() {
+echo "formatting test"
+case "$1" in
+abc)
+echo "abc"
+;;
+*)
+echo "default"
+;;
+esac
+}
+
+if [ "$1" = "hello" ] &&
+[ "$2" = "world" ]; then
+foo "hello" >/dev/null
+fi
+
+[expect]
+#!/usr/bin/env bash
+
+foo()
+{
+    echo "formatting test"
+    case "$1" in
+        abc)
+            echo "abc"
+            ;;
+        *)
+            echo "default"
+            ;;
+    esac
+}
+
+if [ "$1" = "hello" ] &&
+    [ "$2" = "world" ]; then
+    foo "hello" > /dev/null
+fi

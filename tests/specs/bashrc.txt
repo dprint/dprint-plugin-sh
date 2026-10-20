@@ -1,0 +1,6 @@
+-- .bashrc --
+== formats as bash without a shebang ==
+array=( "one" "two" )
+
+[expect]
+array=("one" "two")

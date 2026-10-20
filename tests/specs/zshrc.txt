@@ -1,0 +1,10 @@
+-- .zshrc --
+== formats as zsh without a shebang ==
+repeat 2 {
+print hi
+}
+
+[expect]
+repeat 2 {
+	print hi
+}

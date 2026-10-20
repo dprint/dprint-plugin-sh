@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://plugins.dprint.dev/dprint/dprint-plugin-sh/0.0.0/schema.json",
+  "type": "object",
+  "properties": {
+    "dialect": {
+      "description": "The shell dialect to parse and format the files as.",
+      "type": "string",
+      "default": "auto",
+      "oneOf": [{
+        "const": "auto",
+        "description": "Uses the dialect of the shebang, then of the file extension, falling back to Bash."
+      }, {
+        "const": "bash",
+        "description": "Bash."
+      }, {
+        "const": "posix",
+        "description": "POSIX shell."
+      }, {
+        "const": "mksh",
+        "description": "MirBSD Korn Shell."
+      }, {
+        "const": "zsh",
+        "description": "Zsh."
+      }]
+    },
+    "indentWidth": {
+      "description": "The number of spaces for an indent.",
+      "default": 8,
+      "type": "number"
+    },
+    "useTabs": {
+      "description": "Whether to indent with tabs instead of spaces.",
+      "default": true,
+      "type": "boolean"
+    },
+    "binaryNextLine": {
+      "description": "Whether binary operators (`&&`, `||` and `|`) go at the start of the next line instead of at the end of the line.",
+      "default": false,
+      "type": "boolean"
+    },
+    "switchCaseIndent": {
+      "description": "Whether to indent the pattern arms of a `case` statement.",
+      "default": false,
+      "type": "boolean"
+    },
+    "spaceRedirects": {
+      "description": "Whether to put a space between a redirect operator and its target (ex. `> file` instead of `>file`).",
+      "default": false,
+      "type": "boolean"
+    },
+    "keepPadding": {
+      "description": "Whether to keep the spaces that align columns between tokens.",
+      "default": false,
+      "type": "boolean"
+    },
+    "functionNextLine": {
+      "description": "Whether to put the opening brace of a function on the next line.",
+      "default": false,
+      "type": "boolean"
+    },
+    "neverSplit": {
+      "description": "Whether to keep statements on a single line where possible.",
+      "default": false,
+      "type": "boolean"
+    },
+    "simplify": {
+      "description": "Whether to rewrite redundant syntax to simpler forms (ex. `${foo}` to `$foo`).",
+      "default": false,
+      "type": "boolean"
+    },
+    "minify": {
+      "description": "Whether to remove comments and extra whitespace to make the code small.",
+      "default": false,
+      "type": "boolean"
+    }
+  }
+}
