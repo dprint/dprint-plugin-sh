@@ -20,11 +20,11 @@ Note: You do not need shfmt or shuck installed globally as dprint will run shuck
 
 ## Configuration
 
-Works with no configuration by default. To add configuration, specify a `"sh"` key in your dprint.json:
+Works with no configuration by default. To add configuration, specify a `"shuck"` key in your dprint.json:
 
 ```jsonc
 {
-  "sh": {
+  "shuck": {
     "dialect": "auto",
     "indentWidth": 8,
     "useTabs": true,
@@ -66,13 +66,13 @@ Current defaults are shown below:
 
 In dprint, top-level settings in `dprint.json` (such as `"indentWidth": 2` and `"useTabs": false`) apply to all plugins by default.
 
-If your project sets global options for other languages (like TypeScript or JSON), this plugin inherits them. If you want shell scripts to keep the standard shfmt style (tabs), override them in the `"sh"` block:
+If your project sets global options for other languages (like TypeScript or JSON), this plugin inherits them. If you want shell scripts to keep the standard shfmt style (tabs), override them in the `"shuck"` block:
 
 ```json
 {
   "indentWidth": 2,
   "useTabs": false,
-  "sh": {
+  "shuck": {
     "useTabs": true
   }
 }
