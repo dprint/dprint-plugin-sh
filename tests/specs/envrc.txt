@@ -1,0 +1,26 @@
+-- .envrc --
+== formats an .envrc file ==
+if [[ -f .env ]]; then
+dotenv   .env
+fi
+
+export   FOO=bar
+PATH_add   bin
+
+[expect]
+if [[ -f .env ]]; then
+	dotenv .env
+fi
+
+export FOO=bar
+PATH_add bin
+
+== formats bash syntax ==
+if [[ -f .env ]]; then
+export   FOO=bar
+fi
+
+[expect]
+if [[ -f .env ]]; then
+	export FOO=bar
+fi

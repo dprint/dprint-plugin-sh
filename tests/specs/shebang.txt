@@ -1,0 +1,11 @@
+== formats bash syntax in a .sh file with a bash shebang ==
+#!/usr/bin/env bash
+if [[ 1 -eq 1 ]]; then
+echo foo
+fi
+
+[expect]
+#!/usr/bin/env bash
+if [[ 1 -eq 1 ]]; then
+	echo foo
+fi

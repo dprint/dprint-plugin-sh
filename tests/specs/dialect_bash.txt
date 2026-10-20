@@ -1,0 +1,10 @@
+~~ dialect: bash ~~
+== formats bash syntax in a .sh file ==
+if [[ 1 -eq 1 ]]; then
+echo foo
+fi
+
+[expect]
+if [[ 1 -eq 1 ]]; then
+	echo foo
+fi
