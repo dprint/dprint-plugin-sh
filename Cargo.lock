@@ -134,7 +134,7 @@ dependencies = [
 
 [[package]]
 name = "dprint-plugin-sh"
-version = "0.1.3"
+version = "0.1.4"
 dependencies = [
  "dprint-core",
  "dprint-development",
