@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run -A
 import { conditions, defineMatrix, expr, job, step, workflow } from "jsr:@david/gagen@^0.5.0";
 
-const pluginName = "sh";
+const pluginName = "shuck";
 const cargoWasmName = `dprint_plugin_${pluginName}`;
 
 const matrix = defineMatrix({

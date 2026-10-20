@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: check updates
-    if: github.repository == 'dprint/dprint-plugin-sh'
+    if: github.repository == 'dprint/dprint-plugin-shuck'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

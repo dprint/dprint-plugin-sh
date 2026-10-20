@@ -1,7 +1,7 @@
 {
-  "name": "@dprint/sh",
+  "name": "@dprint/shuck",
   "version": "0.0.0",
-  "description": "Wasm buffer for dprint-plugin-sh.",
+  "description": "Wasm buffer for dprint-plugin-shuck.",
   "keywords": [
     "sh",
     "bash",
@@ -12,13 +12,13 @@
     "formatter",
     "dprint"
   ],
-  "homepage": "https://github.com/dprint/dprint-plugin-sh#readme",
+  "homepage": "https://github.com/dprint/dprint-plugin-shuck#readme",
   "bugs": {
-    "url": "https://github.com/dprint/dprint-plugin-sh/issues"
+    "url": "https://github.com/dprint/dprint-plugin-shuck/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dprint/dprint-plugin-sh.git"
+    "url": "git+https://github.com/dprint/dprint-plugin-shuck.git"
   },
   "license": "MIT",
   "author": "Kenichi Kamiya",

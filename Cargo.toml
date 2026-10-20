@@ -1,13 +1,13 @@
 [package]
-name = "dprint-plugin-sh"
+name = "dprint-plugin-shuck"
 version = "0.1.4"
 authors = ["Kenichi Kamiya <kachick1@gmail.com>"]
 edition = "2024"
-homepage = "https://github.com/dprint/dprint-plugin-sh"
+homepage = "https://github.com/dprint/dprint-plugin-shuck"
 keywords = ["formatting", "formatter", "shell", "bash", "zsh"]
 license = "MIT"
 publish = false
-repository = "https://github.com/dprint/dprint-plugin-sh"
+repository = "https://github.com/dprint/dprint-plugin-shuck"
 description = "Shell script formatter for dprint via shuck-formatter."
 
 [lib]

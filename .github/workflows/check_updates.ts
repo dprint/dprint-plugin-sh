@@ -3,7 +3,7 @@ import { job, workflow } from "jsr:@david/gagen@^0.5.0";
 
 const buildJob = job("build", {
   name: "check updates",
-  if: "github.repository == 'dprint/dprint-plugin-sh'",
+  if: "github.repository == 'dprint/dprint-plugin-shuck'",
   runsOn: "ubuntu-latest",
   timeoutMinutes: 45,
   steps: [
