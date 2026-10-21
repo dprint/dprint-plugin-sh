@@ -12,5 +12,8 @@ import { getBuffer } from "@dprint/shuck";
 
 const formatter = createFromBuffer(getBuffer());
 
-console.log(formatter.formatText("file.sh", "echo   hello\n"));
+console.log(formatter.formatText({
+  filePath: "file.sh",
+  fileText: "echo   hello\n",
+}));
 ```
