@@ -121,38 +121,6 @@ When formatting other extensionless scripts for your use case, use dprint's [`sh
 
 Non-shell files such as `Makefile` are not supported.
 
-## Tips
-
-To format code blocks in markdown, use the `tags` option in the official markdown plugin:
-
-```bash
-dprint add markdown
-```
-
-In `tags`:
-
-- **Key**: The code block language tag in Markdown (e.g. `bash`).
-- **Value**: The target file extension (without a period) that tells this plugin how to format the code.
-
-For example, `.envrc` is a file name, not an extension. So map `"envrc"` to `"bash"`.
-
-```json
-{
-  "markdown": {
-    "tags": {
-      "sh": "sh",
-      "bash": "bash",
-      "zsh": "zsh",
-      "envrc": "bash",
-      "shell": "sh",
-      "shell-script": "sh"
-    }
-  }
-}
-```
-
-This list satisfies linguist [mapping](https://github.com/github-linguist/linguist/blob/90fe0515940a5192980b2545c33ec59ef9fef17b/lib/linguist/languages.yml#L7468-L7476).
-
 ## JS Formatting API
 
 - [JS Formatter](https://github.com/dprint/js-formatter) - Browser/Deno and Node
